@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{499E0DBA-A5FE-4F0F-8E19-B0BFAE635556}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AsyncHattprojekt</RootNamespace>
+    <AssemblyName>AsyncHattprojekt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateOrder.Designer.cs">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfCreatedOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfCreatedOrders.Designer.cs">
+      <DependentUpon>ListOfCreatedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfFinishedOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfFinishedOrders.Designer.cs">
+      <DependentUpon>ListOfFinishedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfStartedOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfStartedOrders.Designer.cs">
+      <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUI.Designer.cs">
+      <DependentUpon>NewUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderLists.Designer.cs">
+      <DependentUpon>OrderLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRegisterForm.Designer.cs">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialVy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialVy.Designer.cs">
+      <DependentUpon>MaterialVy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FraktsedelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FraktsedelForm.Designer.cs">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageHatts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageHatts.Designer.cs">
+      <DependentUpon>ManageHatts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHantering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderHantering.Designer.cs">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateInvoiceFromSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateInvoiceFromSupplier.Designer.cs">
+      <DependentUpon>CreateInvoiceFromSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkapaAnvändare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkapaAnvändare.Designer.cs">
+      <DependentUpon>SkapaAnvändare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxesSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxesSummary.Designer.cs">
+      <DependentUpon>TaxesSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardHatOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StandardHatOrder.Designer.cs">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FärdigFaktura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FärdigFaktura.Designer.cs">
+      <DependentUpon>FärdigFaktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitialPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitialPage.Designer.cs">
+      <DependentUpon>InitialPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegKund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegKund.Designer.cs">
+      <DependentUpon>RegKund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkapaFaktura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkapaFaktura.Designer.cs">
+      <DependentUpon>SkapaFaktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialHatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialHatForm.Designer.cs">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testform.Designer.cs">
+      <DependentUpon>Testform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateInvoiceFromSupplier.resx">
+      <DependentUpon>CreateInvoiceFromSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateOrder.resx">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfCreatedOrders.resx">
+      <DependentUpon>ListOfCreatedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfFinishedOrders.resx">
+      <DependentUpon>ListOfFinishedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfStartedOrders.resx">
+      <DependentUpon>ListOfStartedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUI.resx">
+      <DependentUpon>NewUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderLists.resx">
+      <DependentUpon>OrderLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRegisterForm.resx">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FraktsedelForm.resx">
+      <DependentUpon>FraktsedelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageHatts.resx">
+      <DependentUpon>ManageHatts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialVy.resx">
+      <DependentUpon>MaterialVy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkapaAnvändare.resx">
+      <DependentUpon>SkapaAnvändare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxesSummary.resx">
+      <DependentUpon>TaxesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FärdigFaktura.resx">
+      <DependentUpon>FärdigFaktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialPage.resx">
+      <DependentUpon>InitialPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderHantering.resx">
+      <DependentUpon>OrderHantering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegKund.resx">
+      <DependentUpon>RegKund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardHatOrder.resx">
+      <DependentUpon>StandardHatOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <EmbeddedResource Include="SkapaFaktura.resx">
+      <DependentUpon>SkapaFaktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testform.resx">
+      <DependentUpon>Testform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialHatForm.resx">
+      <DependentUpon>SpecialHatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{C09E178A-BBA3-421F-A3BB-A28B3B8E79C6}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{62266B2B-09ED-437E-9987-7BC4AAB5DC63}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tall-hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trolley copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gentleman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OJLOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OJLOGO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
